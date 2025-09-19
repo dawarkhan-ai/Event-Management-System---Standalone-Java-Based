@@ -53,27 +53,49 @@ EventManagementSystem/
 
 ## 🛠️ How to Run
 
-1. **Database Setup:**
-   - Import and execute `EventManagementSystem.sql` in MySQL Workbench or phpMyAdmin.
-   - Make sure the `EventManagementSystem` schema and all required tables are created.
+✅ Step 1. Clone the Project
 
-2. **Java Setup:**
-   - Configure database credentials in `DatabaseConnection.java`.
-   - Compile all Java files:
+✅ Step 2 : Setup JDK and IntelliJ in PC
 
-```bash
+✅ Step 4: Setup the MySQL Database Management System
+
+✅ Step 5: Build the MySQL Database 
+
+Goto System Terminal:
+   - ensure MySql DBMS setup is done or not  by 
+            `mysql --version`
+         
+   - opens terminal and login your mysql account by
+      	   `mysql -u root -p`
+	
+opens project folder from file manager and then open .sql file and copy all codes as it is and paste it in your windows command promt or other terminal.
+
+✅ Step 6: Update DB Connection Details in Code
+
+this is current code in your src/Database/Database.java
+    
+    private static final String USER = ""; // apna DB username  
+    private static final String PASSWORD = ""; // apna DB password
+    
+
+
+✅ Step 7:  Run the Project
+Option A : Run from .bat file (easy)
+	Open the main java project folder in file manager and double clicks on the run_project file. It is a .bat file which indirectly works on windows terminal and automatically compile and run java file.
+
+Option B : Open Project in IntelliJ (Advanced)
+1.	Open IntelliJ IDEA.
+2.	Go to File → Open → Select the extracted folder (YourJavaProject).
+3.	Wait for indexing to complete. 
+
+then go to IntelliJ terminal -
+     Run from Terminal 
+1.	Navigate to src/
 cd src/
-
-javac -encoding UTF-8 -cp ".;../lib/mysql-connector-java-8.x.x.jar" main/MainFrame.java gui/*.java dao/*.java service/*.java model/*.java database/*.java
-
-
-```
-
-3. **Run the Application:**
-```bash
-java -cp ".;../lib/mysql-connector-java-8.x.x.jar" main.MainFrame
-
-```
+2.	Compile:
+ javac -encoding UTF-8 -cp ".;../lib/mysql-connector-java-8.x.x.jar" main/MainFrame.java gui/*.java dao/*.java service/*.java model/*.java database/*.java
+3.	Run:
+           	java -cp ".;../lib/mysql-connector-java-8.x.x.jar" main.MainFrame
 
 ---
 
